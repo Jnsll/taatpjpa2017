@@ -12,7 +12,7 @@ public class Department {
 
 	private long id;
 	private String name;
-	private Collection<Lieu> lieux;
+	private Collection<Site> lieux;
 	
 	/**
 	 * 
@@ -49,14 +49,14 @@ public class Department {
 	 * @return sites located in a department.
 	 */
 	@OneToMany(mappedBy="dep")
-	public Collection<Lieu> getLieux() {
+	public Collection<Site> getLieux() {
 		return lieux;
 	}
 	/**
 	 * 
 	 * @param lieux located in a department.
 	 */
-	public void setLieux(Collection<Lieu> lieux) {
+	public void setLieux(Collection<Site> lieux) {
 		this.lieux = lieux;
 	}
 
