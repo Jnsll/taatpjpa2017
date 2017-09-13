@@ -17,6 +17,9 @@ public class JpaTest {
 
 
 		try {
+			Person p = new Person();
+			p.setFirstname("Arthur");
+			manager.persist(p);
 
 		} catch (Exception e) {
 			e.printStackTrace();
