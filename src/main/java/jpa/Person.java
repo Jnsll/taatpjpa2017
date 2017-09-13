@@ -1,8 +1,11 @@
 package jpa;
 
+import java.util.Collection;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Person {
@@ -12,6 +15,7 @@ public class Person {
 	private String name;
 	private String tel;
 	private String mail;
+	public Collection<Sport> sports;
 	
 	@Id
 	@GeneratedValue
@@ -45,6 +49,13 @@ public class Person {
 	}
 	public void setMail(String mail) {
 		this.mail = mail;
+	}
+	@ManyToMany
+	public Collection<Sport> getSports() {
+		return sports;
+	}
+	public void setSports(Collection<Sport> sports) {
+		this.sports = sports;
 	}
 	public Person() {
 		
